@@ -1,1 +1,1 @@
-# chatpapp-django
+# chat app-django
