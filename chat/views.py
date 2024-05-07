@@ -36,7 +36,7 @@ def send(request):
     return  HttpResponse('Message sent successfully')
 
 def getMessages(request, room):
-    room_detail = Room.objects.get(name= room)
+    room_details = Room.objects.get(name= room)
     
-    messages = Message.objects.filter(room=room_detail.id)
+    messages = Message.objects.filter(room=room_details.id)
     return JsonResponse({"message": list(messages.values())})
